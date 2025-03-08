@@ -55,10 +55,10 @@ func PrintStocks() {
 Inicializa los datos necesarios y calcula la rentabilidad por dividendo de cada activo
 */
 func Init() {
-	stocks[0] = Stock{"BPYPP", StringToCurrency("$16.10"), StringToCurrency("$12.95"), StringToCurrency("$1.63"), 0}
-	stocks[1] = Stock{"BPYPO", StringToCurrency("$15.37"), StringToCurrency("$12.74"), StringToCurrency("$1.59"), 0}
-	stocks[2] = Stock{"BPYPN", StringToCurrency("$14.22"), StringToCurrency("$11.51"), StringToCurrency("$1.44"), 0}
-	stocks[3] = Stock{"BPYPM", StringToCurrency("$16.15"), StringToCurrency("$12.82"), StringToCurrency("$1.56"), 0}
+	stocks[0] = Stock{"BPYPP", StringToCurrency("$14.66"), StringToCurrency("$12.95"), StringToCurrency("$1.63"), 0}
+	stocks[1] = Stock{"BPYPO", StringToCurrency("$14.35"), StringToCurrency("$12.74"), StringToCurrency("$1.59"), 0}
+	stocks[2] = Stock{"BPYPN", StringToCurrency("$13.91"), StringToCurrency("$11.51"), StringToCurrency("$1.44"), 0}
+	stocks[3] = Stock{"BPYPM", StringToCurrency("$15.20"), StringToCurrency("$12.82"), StringToCurrency("$1.56"), 0}
 	for i := 0; i < EQUITIES; i++ {
 		stocks[i].yield = (float64(stocks[i].dividend) / float64(stocks[i].price)) * 100.00
 	}
@@ -150,7 +150,7 @@ func weighted(capital int64) {
 }
 
 func main() {
-	var capital string = "$734.24"
+	var capital string = "$116.00"
 
 	Init()
 	PrintStocks()
